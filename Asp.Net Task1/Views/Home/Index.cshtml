@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+</head>
+
+
+<body>
+
+
+    <div >
+        <ol >
+            <li  style="background-color:blue; font-size:25px">
+                <div >
+                    <div style="font-size:40px;font-weight:bold">Drinks</div>
+                    @foreach (var item in Model.Drinks)
+                    {
+                        <p>@item.DrinkId. @item.DrinkName -> @item.DrinkPrice manat </p>
+                    }
+                </div>
+            </li>
+            <li  style="background-color:red; font-size : 25px">
+                <div >
+                    <div style="font-size:40px;font-weight:bold">Hot Meal</div>
+                    @foreach (var item in Model.HotMeals)
+                    {
+                        <p>@item.HotMealId. @item.HotMealName -> @item.HotMealPrice manat </p>
+                    }
+                </div>
+            </li>
+            <li  style="background-color:green; font-size : 25px">
+                <div >
+                    <div style="font-size:40px;font-weight:bold">FastFood</div>
+                    @foreach (var item in Model.FastFoods)
+                    {
+                        <p>@item.FastFoodId. @item.FastFoodName -> @item.FastFoodPrice manat</p>
+                    }
+                </div>
+            </li>
+        </ol>
+    </div>
+
+
+
+</body>
