@@ -86,11 +86,11 @@ namespace Asp.Net_Task1.Controllers
 
         public IActionResult Index()
         {
-            dynamic mymodel = new AllItemsVIewModel();
-            mymodel.Drinks = GetDrinks();
-            mymodel.HotMeals = GetHotMeals();
-            mymodel.FastFoods = GetFastFoods();
-            return View(mymodel);
+            dynamic allitemsVIewModel = new AllItemsVIewModel();
+            allitemsVIewModel.Drinks = GetDrinks();
+            allitemsVIewModel.HotMeals = GetHotMeals();
+            allitemsVIewModel.FastFoods = GetFastFoods();
+            return View(allitemsVIewModel);
         }
 
         public List<Fastfood> GetFastFoods()
